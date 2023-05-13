@@ -1,0 +1,19 @@
+
+#footer-component{
+    width: 100%;
+    min-height: 500px;
+    display: block;
+    bottom: 0%;
+    border: solid #87e60c;
+    background-color: var(--color-black-principal);
+
+    .text-footer{ 
+    
+        background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+        background-clip: text;
+        -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+        -webkit-text-fill-color: transparent;
+        color: black;
+    }
+}
+

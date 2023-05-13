@@ -1,0 +1,23 @@
+
+
+#home-component{
+    background-color: var(--color-black-principal);
+
+    .container-main{
+        width: 73%;
+        margin-inline: auto !important;
+        box-sizing: border-box;
+        border: solid #d17710;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        .big-card-box{
+            width: 50%;
+        }
+        .others-cards-box{
+            width: 50%;
+        }
+
+    }
+
+}
