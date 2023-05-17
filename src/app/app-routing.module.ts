@@ -7,11 +7,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
 
+  { path: '',   redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 
-  { path: '',   redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

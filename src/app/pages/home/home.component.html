@@ -16,7 +16,12 @@
         <!-- OTHERS CARDS -->
 
         <div class="others-cards-box">
-            <app-other-cards></app-other-cards>
+            <app-other-cards *ngFor="let card of listCards" 
+                [imagem]="card.imagem" 
+                [descricao]="card.descricao" 
+                [titulo]="card.titulo" 
+                [texto]="card.texto"> 
+            </app-other-cards>
         </div>
     </div>
 

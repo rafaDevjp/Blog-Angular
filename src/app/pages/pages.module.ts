@@ -22,7 +22,10 @@ import { SharedModule } from '../shared/shared.module';
     
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ]
 })
 export class PagesModule { }

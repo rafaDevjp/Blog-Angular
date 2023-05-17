@@ -1,1 +1,16 @@
-<p>other-cards works!</p>
+
+
+<!-- Other Cards Components -->
+
+<section id="others-card-components">
+
+    <div class="small-cards">
+        <div class="figure-box">
+            <img [src]="imagem" [alt]="descricao">
+        </div>
+        <div class="text-box">
+            <h2>{{titulo}}</h2>
+            <p>{{texto | slice:0: 340 }} <a href=""> ver mais...</a></p>
+        </div>
+    </div>
+</section>
