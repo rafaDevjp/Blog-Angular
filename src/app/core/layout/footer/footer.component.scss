@@ -5,16 +5,12 @@
     display: block;
     bottom: 0%;
     // border: solid #87e60c;
-    background-color: var(--color-black-principal);
+    background-color: steelblue;
 
     .text-footer{ 
-    
-        background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
-        background-clip: text;
-        -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
-        -webkit-text-fill-color: transparent;
         color: black;
         font-size: 14px;
+        text-align: center;
     }
 }
 

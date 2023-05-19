@@ -9,9 +9,18 @@
     background-color: var(--color-black-principal);
     .title-main-text{
         font-size: 7rem;
+        @media (max-width: 1640px){
+            font-size: 6rem
+        }
+        @media (max-width: 1440px){
+            font-size: 5rem
+        }
+        @media (max-width: 1025px){
+            font-size: 4rem
+        }
        
             /* Primeiro passo: definir um degradê como fundo */
-            background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise) !important;
+            background-image: linear-gradient(to bottom, #663399, #4682b4, #40e0d0) !important;
             
             /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
             background-clip: text !important;

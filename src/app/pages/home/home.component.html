@@ -10,7 +10,12 @@
     <div class="container-main">
         <!-- CARD MAIN -->
         <div class="big-card-box">
-            <app-big-card></app-big-card>
+            <app-big-card 
+            [descricao]="this.poste?.descricao" 
+            [imagem]="this.poste?.imagem" 
+            [texto]="this.poste?.texto" 
+            [titulo]="this.poste?.titulo">
+        </app-big-card>
         </div>
 
         <!-- OTHERS CARDS -->

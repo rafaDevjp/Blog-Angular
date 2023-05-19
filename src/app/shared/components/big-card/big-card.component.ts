@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Poste } from '../models/poste';
+import { PosteService } from './../../../core/services/poste.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-big-card',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BigCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() imagem: any;
+  @Input() titulo: any;
+  @Input() texto: any;
+  @Input() descricao: any;
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
 }

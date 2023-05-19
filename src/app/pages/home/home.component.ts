@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PosteService } from 'src/app/core/services/poste.service';
+import { Poste } from 'src/app/shared/components/models/poste';
 
 @Component({
   selector: 'app-home',
@@ -7,33 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  fullText: string = "Em algum momento na sua vida, principalmente profissional você precisará usar técnicas de design para coisas que você produz, especialmente quando se trata de negócios e marketing.Mesmo que você não tenha habilidades de design ou qualquer conhecimento técnico de design, você ainda pode aplicar algumas técnicas e se preocupar com o design, seja em suas peças publicitárias, em seus sites e aplicativos, ou até mesmo em artes para redes sociais e blogs."
+  poste: Poste | undefined;
+  listCards:any;
 
- 
-  listCards = [
-    {
-      imagem:     '/assets/image/cards/art-inspiration-945x671.jpg',
-      descricao:  'design simples',
-      titulo:     'Design para Marketing que Todos Não-Designers Deveriam Saber',
-      texto:      this.fullText
-    },
-    {
-      imagem:     '/assets/image/cards/art-inspiration-945x671.jpg',
-      descricao:  'design simples',
-      titulo:     'Design para Marketing que Todos Não-Designers Deveriam Saber',
-      texto:      this.fullText
-    },
-    {
-      imagem:     '/assets/image/cards/art-inspiration-945x671.jpg',
-      descricao:  'design simples',
-      titulo:     'Design para Marketing que Todos Não-Designers Deveriam Saber',
-      texto:      this.fullText
-    }
-  ]
-
-  constructor() { }
+  constructor(
+    private postService: PosteService
+  ) {}
 
   ngOnInit(): void {
+    let posteMain: Poste[] = this.postService.postagens();
+    let listCard:  Poste[] = this.postService.listPostagens();
+    this.poste = posteMain[0]
+    this.listCards = listCard
   }
 
 }

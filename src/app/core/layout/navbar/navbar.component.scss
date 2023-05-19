@@ -18,7 +18,7 @@
             text-align: center;
             // border: 1px solid red;
             a{
-                color: rgb(255, 255, 255) !important;
+                color: #4682b4!important;
                 font-size: 22px;
                 font-weight: 600;
                 text-decoration: none;
@@ -34,22 +34,26 @@
                 justify-content: space-evenly;
                 align-items: center;
                 li a{
-                    color: #ffffff;
+                    color: #4682b4;
                     text-decoration: none;
                     font-size: 16px;
                     font-weight: bold;
                 }
                 li a:hover{
-                    color: #f0ec06;
+                    color: #40e0d0;
                 }
                 li a:active{
-                    color: #f0ec06;
+                    color: #40e0d0;
                 }
             }
             
         }
     }
 
+    .active{
+        color: #40e0d0 !important;
+    }
 
 
-}
+
+} /* END COMPONENT*/
