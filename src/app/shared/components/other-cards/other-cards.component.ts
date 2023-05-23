@@ -7,13 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OtherCardsComponent implements OnInit {
 
-  @Input() imagem: any;
-  @Input() descricao: any;
-  @Input() titulo: any;
-  @Input() texto: any
+  @Input() imagem: string = "";
+  @Input() descricao: string = "";
+  @Input() titulo: string = "";
+  @Input() texto: string = ""
+  @Input() idCard: string = "";
 
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
 
 

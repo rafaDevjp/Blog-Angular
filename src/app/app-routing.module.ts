@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PosteComponent } from './pages/poste/poste.component';
 
 const routes: Routes = [
 
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'poster/:id', component: PosteComponent},
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 
 ];
 

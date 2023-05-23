@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PosteService } from 'src/app/core/services/poste.service';
-import { Poste } from 'src/app/shared/components/models/poste';
+import { Poste } from 'src/app/shared/models/poste';
+
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,10 @@ export class HomeComponent implements OnInit {
     let listCard:  Poste[] = this.postService.listPostagens();
     this.poste = posteMain[0]
     this.listCards = listCard
+
+    console.log(this.listCards);
+    
+    
   }
 
 }

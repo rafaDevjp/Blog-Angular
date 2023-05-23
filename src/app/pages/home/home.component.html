@@ -11,10 +11,12 @@
         <!-- CARD MAIN -->
         <div class="big-card-box">
             <app-big-card 
+            [idCard]="this.poste?.id"
             [descricao]="this.poste?.descricao" 
             [imagem]="this.poste?.imagem" 
             [texto]="this.poste?.texto" 
-            [titulo]="this.poste?.titulo">
+            [titulo]="this.poste?.titulo"
+            >
         </app-big-card>
         </div>
 
@@ -25,9 +27,17 @@
                 [imagem]="card.imagem" 
                 [descricao]="card.descricao" 
                 [titulo]="card.titulo" 
-                [texto]="card.texto"> 
+                [texto]="card.texto"
+                [idCard]="card.id">
+               
             </app-other-cards>
         </div>
+
+        <div class="divisao">
+            <hr>
+        </div>
     </div>
+   
 
 </section>
+

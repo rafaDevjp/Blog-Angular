@@ -1,4 +1,4 @@
-import { Poste } from '../models/poste';
+import { Poste } from '../../models/poste';
 import { PosteService } from './../../../core/services/poste.service';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -13,6 +13,7 @@ export class BigCardComponent implements OnInit {
   @Input() titulo: any;
   @Input() texto: any;
   @Input() descricao: any;
+  @Input() idCard: any = "0";
 
   constructor(
   ) { }

@@ -3,14 +3,15 @@
 <!-- Other Cards Components -->
 
 <section id="others-card-components">
-
     <div class="small-cards">
-        <div class="figure-box">
+        <div class="figure-box" [routerLink]="['/poster/', idCard]">
             <img [src]="imagem" [alt]="descricao">
         </div>
         <div class="text-box">
-            <h2>{{titulo}}</h2>
-            <p>{{texto | slice:0: 340 }} <a href=""> ver mais...</a></p>
+            <h2 [routerLink]="['/poster/', idCard]">{{titulo}}</h2>
+            <p>{{texto | slice:0: 340 }} <a [routerLink]="['/poster/', idCard]"> ver mais...</a></p>
         </div>
+        
     </div>
 </section>
+
