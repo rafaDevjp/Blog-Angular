@@ -10,14 +10,34 @@
     <div class="container-main">
         <!-- CARD MAIN -->
         <div class="big-card-box">
-            <app-big-card></app-big-card>
+            <app-big-card 
+            [idCard]="this.poste?.id"
+            [descricao]="this.poste?.descricao" 
+            [imagem]="this.poste?.imagem" 
+            [texto]="this.poste?.texto" 
+            [titulo]="this.poste?.titulo"
+            >
+        </app-big-card>
         </div>
 
         <!-- OTHERS CARDS -->
 
         <div class="others-cards-box">
-            <app-other-cards></app-other-cards>
+            <app-other-cards *ngFor="let card of listCards" 
+                [imagem]="card.imagem" 
+                [descricao]="card.descricao" 
+                [titulo]="card.titulo" 
+                [texto]="card.texto"
+                [idCard]="card.id">
+               
+            </app-other-cards>
+        </div>
+
+        <div class="divisao">
+            <hr>
         </div>
     </div>
+   
 
 </section>
+

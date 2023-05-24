@@ -1,0 +1,116 @@
+
+#poste-components{
+    width: 100%;
+    min-height: 80vh;
+    background: var(--color-black-principal);
+
+    .container{
+        width: 80%;
+        height: auto;
+        margin: auto !important;
+        box-sizing: border-box;
+        padding: 50px;
+        border: solid #d1a7a700;
+        .titulo-poste{
+            width: 50%;
+            margin: auto !important;
+            padding: 15px;
+            h1{
+                color: var(--color-white-principal);
+                font-size: 2.3rem;
+                font-family: 'Roboto', sans-serif !important;
+                margin: 10px 0 !important;
+                // text-align: justify;
+                word-break: normal;
+                white-space: normal;
+            }
+            .registros{
+                // width: 95%;
+                // margin: auto !important;
+                color: #98d1ff;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    margin:40px 0 20px 0px!important;
+                    justify-content: flex-start;
+                    // border:solid #98d1ff;
+                    li{
+                        font-size: 12px;
+                        margin-right: 30px !important;
+                    }
+                }
+            }
+           
+        }
+        .intro-text{
+            box-sizing: border-box;
+            width: 55%;
+            
+            margin: auto !important;
+            p{
+                color: rgb(104, 104, 104);
+                font-size: 1.8rem;
+                font-weight: 100;
+                text-align: justify;
+                // line-height: 50px;
+                margin:0px 40px 40px 40px !important;
+            }
+        }
+        .texto-poste{
+            box-sizing: border-box;
+            width: 55%;
+            text-align: center;
+            margin: auto !important;
+            padding: 20px 10px;
+            font-size: 19px;
+            color: var(--color-white-principal) !important;
+            p{
+                text-align: justify;
+                word-spacing: normal;
+                word-wrap: break-word;
+                line-height: 28px;
+                text-indent: 15px;
+                margin:0px 40px 40px 40px !important;
+            }
+        }
+        .banner-poste{
+            width:35%;
+            margin:20px auto !important;
+            // border:solid #fff;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .listaPostes{
+            box-sizing: border-box;
+            width: 53%;
+            text-align: center;
+            margin: auto !important;
+            padding: 20px 10px;
+        }
+    }
+    .leia-mais{
+        width: 50%;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 40px;
+        margin: auto !important;
+        
+        h1{
+            color: var(--color-white-principal);
+            margin: auto;
+            font-size: 2rem !important;
+        }
+    }
+
+    hr{
+        border: solid .2px #6969699a !important;
+        margin-block: 20px;
+    }
+   
+
+}

@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from '../shared/shared.module';
+import { PosteComponent } from './poste/poste.component';
 
 
 
@@ -14,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PosteComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,10 @@ import { SharedModule } from '../shared/shared.module';
     
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ]
 })
 export class PagesModule { }

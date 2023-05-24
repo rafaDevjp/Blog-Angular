@@ -1,0 +1,48 @@
+
+
+<section id="poste-components">
+
+    <div class="container">
+        <div class="banner-poste">
+            <img [src]="poste?.imagem" [alt]="poste?.descricao" srcset="">
+        </div>
+        <div class="titulo-poste">
+            <h1>{{poste?.titulo}}</h1>
+            <div class="registros">
+                <ul>
+                    <li><strong>Autor: </strong> <span> Fulano de tal</span></li>
+                    <li><strong>Categoria: </strong> <span> Tipo da categoria</span></li>
+                    <li><span class="material-symbols-outlined">calendar_month</span>
+                        <span>02/05/2023</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="intro-text">
+            <p>{{ poste?.introducao}}</p>
+        </div>
+        <div class="texto-poste">
+            <p>{{poste?.texto}}</p>
+        </div>
+
+        
+    </div>
+
+    <div class="container"> 
+        <hr>
+        <div class="leia-mais">
+            <h1>Leia também</h1>
+        </div>
+        <div class="listaPostes">
+            <app-other-cards *ngFor="let card of listPostes" 
+                [imagem]="card.imagem" 
+                [descricao]="card.descricao" 
+                [titulo]="card.titulo" 
+                [texto]="card.texto"
+                [idCard]="card.id">
+        </app-other-cards>
+        </div>
+    </div>
+
+</section>

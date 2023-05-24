@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PosteService } from 'src/app/core/services/poste.service';
+import { Poste } from 'src/app/shared/models/poste';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  poste: Poste | undefined;
+  listCards:any;
+
+  constructor(
+    private postService: PosteService
+  ) {}
 
   ngOnInit(): void {
+    let posteMain: Poste[] = this.postService.postagens();
+    let listCard:  Poste[] = this.postService.listPostagensHome();
+    this.poste = posteMain[0]
+    this.listCards = listCard
+
+    console.log(this.listCards);
+    
+    
   }
 
 }
