@@ -9,25 +9,28 @@ import { Poste } from 'src/app/shared/models/poste';
   styleUrls: ['./poste.component.scss']
 })
 export class PosteComponent implements OnInit {
-  listPostes: Poste[]=[];
+  listPostes: any;
   poste: Poste | undefined
   constructor(
     private postService: PosteService,
-   private activeRouter: ActivatedRoute
+    private activeRouter: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.activeRouter.paramMap.subscribe(res => {
-      let Id = res.get("id")
+      let Id = res.get("id");
       console.log(Id);
       this.setValueToposte(Id);
+
+      this.listPostes = this.postService.listPostagens().filter(post => post.id != Id);
+      this.topo();
     })
-    this.listPostes = this.postService.listPostagens()
+    
   }
 
+  // Lista os posts 
   setValueToposte(id:any){
     const result: Poste = this.postService.listPostagens().filter(post => post.id == id)[0];
-
     this.poste = {
       id: result.id,
       slug: result.slug,
@@ -38,10 +41,11 @@ export class PosteComponent implements OnInit {
       registro: result.registro,
       introducao: result.introducao,
     };
+  }
 
-    console.log(":::: Poste selecionado ::::", this.poste);
-    
-
+  // Topo da pagna
+  topo(){
+    parent.scroll(0,0);
   }
 
 }
