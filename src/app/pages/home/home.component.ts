@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     let posteMain: Poste[] = this.postService.postagens();
-    let listCard:  Poste[] = this.postService.listPostagens();
+    let listCard:  Poste[] = this.postService.listPostagensHome();
     this.poste = posteMain[0]
     this.listCards = listCard
 
